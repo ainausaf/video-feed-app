@@ -22,6 +22,8 @@ public interface MainActivityContract {
 
        void onCreate();
 
-      void getRestaurantData(int videoId);
+        void getTutorialsData(int videoId);
+
+        void getFeedData();
     }
 }

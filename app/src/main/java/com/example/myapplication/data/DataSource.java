@@ -30,6 +30,8 @@ public class DataSource {
 
     }
 
+
+    //if the app runs first time, a network call is made, otherwise it is taken from memory.
     Observable<FeedData> getFeedDataForVideos() {
 
         return Observable.concat(

@@ -50,7 +50,12 @@ public class TutorialFeedDetailsActivity extends BaseActivity implements Tutoria
         initViews();
         setClickOnListeners();
     }
+    /*
+    Just taking the first item from the list and showing the details of that item.
+    * */
 
+    //I could have shown the whole list in the recycler view again, but after checking the data,
+    // the item in the list were duplicate, so just retrieving the first item
     private void initViews() {
         tutorialDetail = tutorialList.get(0);
         tutorialName.setText(tutorialDetail.getName());
@@ -60,7 +65,9 @@ public class TutorialFeedDetailsActivity extends BaseActivity implements Tutoria
                 R.drawable.layout_placeholder).error(
                 R.drawable.layout_placeholder).into(tutorialImage);
     }
-
+    /*
+    On click of the item, it opens the link in the brower
+    */
     private void setClickOnListeners() {
         tutorialImage.setOnClickListener(new View.OnClickListener() {
             @Override

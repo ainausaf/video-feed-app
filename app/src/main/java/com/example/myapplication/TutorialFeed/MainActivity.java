@@ -1,8 +1,6 @@
 package com.example.myapplication.TutorialFeed;
 
 import android.content.Intent;
-import android.os.Parcelable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.myapplication.BaseActivity;
@@ -16,7 +14,6 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ProgressBar;
 
 import java.io.Serializable;
@@ -71,10 +68,9 @@ public class MainActivity extends BaseActivity implements MainActivityContract.V
 
     }
 
-
-
+    // response to the on click event on the recycler view
     private void startDetailsActivity(Video video) {
-        mainActivityPresenter.getRestaurantData(video.getId());
+        mainActivityPresenter.getTutorialsData(video.getId());
     }
 
     public void getVideoFeedData(FeedData feedData){
@@ -95,6 +91,7 @@ public class MainActivity extends BaseActivity implements MainActivityContract.V
         System.out.println("APP Crashed");
     }
 
+    //passing the list from the second API call to TutorialsFeedDetailsActivity
     @Override
     public void navigateToTutorialDetails(List<TutorialDetail> tutorialDetails) {
         Intent i = new Intent(this, TutorialFeedDetailsActivity.class);

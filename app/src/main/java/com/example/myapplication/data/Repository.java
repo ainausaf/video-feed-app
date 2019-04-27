@@ -16,6 +16,7 @@ public class Repository {
         this.remoteDataSource = remoteDataSource;
     }
 
+    //to get the list of tutorial for the first screen
     public Observable<FeedData> getFeedData() {
 
         Observable<FeedData> observable;
@@ -25,6 +26,7 @@ public class Repository {
         return observable;
     }
 
+    //to get the tutorial details list
     public Observable<List<TutorialDetail>> getTutorialDetail(int videoId) {
 
         Observable<List<TutorialDetail>> observable;

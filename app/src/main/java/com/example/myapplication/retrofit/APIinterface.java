@@ -15,8 +15,8 @@ public interface APIinterface {
     @GET("/youtube/home_feed")
     Observable<FeedData> getFeedData();
 
+    //passing the Id parameter in the request
     @GET("/youtube/course_detail")
     Observable<List<TutorialDetail>> getTutorialDetails(@Query("id") int id);
 
-  //  http://api.themoviedb.org/3/movie/top_rated?api_key=INSERT_YOUR_API_KEY
 }
